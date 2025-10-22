@@ -1,16 +1,22 @@
-# emotion-classifier-xlnet
+Emotion Classification Using XLNet
 
-A compact project showing how I fine tuned XLNet for emotion classification (fear, joy, anger, sadness).  
-This repo focuses on data cleaning, balancing, and a reproducible pipeline for training and inference.
+=>Overview:
+This project fine tunes the XLNet transformer model to classify human emotions (anger, fear, joy, sadness) from text data. It demonstrates the power of transfer learning for nuanced emotion detection.
 
-## What this repo contains
-- Data cleaning & preprocessing scripts  
-- Dataset balancing utilities (oversample / undersample)  
-- Training script using Hugging Face `Trainer`  
-- Simple inference pipeline script using Hugging Face `pipeline`  
-- Example config and requirements
+=>Key Features:
 
-- Problem: messy text & imbalanced labels cause poor results  
-- Approach: clean → balance → fine-tune → use pipeline for predictions  
-- Result: stable accuracy after ~3 epochs (on my dataset)
+Cleaned and balanced emotion labeled datasets.
 
+Tokenized data with XLNetTokenizer and fine tuned XLNetForSequenceClassification.
+
+Trained using the HuggingFace Trainer API for efficient experimentation.
+
+Evaluated model performance using accuracy and F1-score.
+
+Integrated inference pipeline for predicting emotions in new text samples.
+
+=>Tech Stack:
+Python, PyTorch, Transformers, HuggingFace Datasets, Scikit learn
+
+=>Results:
+Fine tuned XLNet achieved robust multi class emotion classification performance, showing strong generalization across unseen tex
